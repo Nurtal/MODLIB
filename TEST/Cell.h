@@ -2,9 +2,7 @@
 #define DEF_CELL
 
 #include <string>
-#include "cell_components/Membrane.h"
-#include "cell_components/Nucleus.h"
-#include "cell_components/Cytoplasm.h"
+
 
 class Cell{
 
@@ -19,9 +17,6 @@ class Cell{
 	//Attributs
  	private:
  	bool alive;
- 	Membrane membrane;
- 	Nucleus nucleus;
- 	Cytoplasm cytoplasm;
 };
 
 #endif

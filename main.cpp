@@ -14,6 +14,8 @@ int main(){
 	Lymphocyte murlock1;
 	LymphocyteT	murlock2;
 
+	cout << "Processing" << "\n";
+
 	murlock2.setClasse("cytotoxique");
 	machin.toLife();
 	machin.isAlive();
