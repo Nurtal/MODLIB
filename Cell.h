@@ -15,13 +15,18 @@ class Cell{
 	bool isAlive();
 	void toLife();
 	void kill();
+	bool isAnucleated();
+	bool isMultinucleated();
+	void initNucleus();
 
 	//Attributs
  	private:
  	bool alive;
+ 	bool anucleated;
+ 	bool multinucleated;
  	Membrane membrane;
- 	Nucleus nucleus;
  	Cytoplasm cytoplasm;
+ 	Nucleus nucleus;
 };
 
 #endif

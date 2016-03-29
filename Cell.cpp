@@ -7,10 +7,11 @@
 using namespace std;
 
 Cell::Cell(){
-	bool alive = true;
-	Membrane membrane;
-	Nucleus nucleus;
-	Cytoplasm cytoplasm;
+	alive = true;
+	anucleated = false;
+	multinucleated = false;
+	membrane = Membrane();
+	cytoplasm = Cytoplasm();
 }
 
 Cell::~Cell(){
@@ -21,6 +22,12 @@ Cell::~Cell(){
 bool Cell::isAlive(){
 	return alive;
 }
+bool Cell::isAnucleated(){
+	return anucleated;
+}
+bool Cell::isMultinucleated(){
+	return multinucleated;
+}
 
 
 //Set
@@ -29,4 +36,9 @@ void Cell::toLife(){
 }
 void Cell::kill(){
 	alive = false;
+}
+void Cell::initNucleus(){
+	if(!(anucleated) && !(multinucleated)){
+		nucleus = Nucleus();
+	}
 }

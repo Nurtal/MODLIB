@@ -13,11 +13,12 @@ int main(){
 	Leucocyte truc;
 	Lymphocyte murlock1;
 	LymphocyteT	murlock2;
-
 	cout << "Processing" << "\n";
-
 	murlock2.setClasse("cytotoxique");
 	machin.toLife();
 	machin.isAlive();
+
+	cout << machin.isAnucleated() << "\n";
+
 	return 0;
 }
