@@ -6,10 +6,6 @@
 
 using namespace std;
 
-/*
- Problem With Vector initialisation
-*/
-
 
 
 Membrane::Membrane(){
@@ -32,7 +28,6 @@ void diffusion(){
 
 }
 
-void addMembraneProtein(Protein prot){
-	//FIXE ME
+void Membrane::addMembraneProtein(Protein prot){
 	membraneProtein.push_back(prot);
 }

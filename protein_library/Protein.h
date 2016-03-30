@@ -9,8 +9,14 @@ class Protein{
 	public:
 	Protein();
 	~Protein();
+	std::string getId() const;
+	std::string getSequence();
 
 	//Attributs
+	private:
+	std::string id;
+	std::string sequenceFileName;
+
 
 
 

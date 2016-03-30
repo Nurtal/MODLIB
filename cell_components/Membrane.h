@@ -18,6 +18,7 @@ class Membrane{
 	void addMembraneProtein(Protein);
 
 	//Attributs
+	private:
 	std::vector<Protein> membraneProtein;
 
 };
