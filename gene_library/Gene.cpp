@@ -1,29 +1,29 @@
+#include "Gene.h"
 #include <iostream>
 #include <fstream>
 #include <sstream>
-#include "Protein.h"
-#include "../gene_library/Gene.h"
 #include <string>
-
 
 using namespace std;
 
-Protein::Protein(){
+Gene::Gene(){
 
 	sequenceFileName = "TEST/sequence.txt";
 
 }
-Protein::~Protein(){
+Gene::~Gene(){
 
 }
 
-
-//get
-string Protein::getId() const{
+string Gene::getId() const{
 	return id;
 }
 
-string Protein::getSequence(){
+string Gene::getChr() const{
+	return chromosome;
+}
+
+string Gene::getSequence(){
 	string line;
 	string sequence = "";
 	ifstream sequenceFile(sequenceFileName.c_str());
@@ -37,18 +37,7 @@ string Protein::getSequence(){
 }
 
 
-Gene Protein::getGene() const{
-	return gene;
-}
-
-string Protein::getGeneName(){
-	return gene.getId();
-}
-
 //set
-void Protein::setSequence(string filename){
+void Gene::setSequence(string filename){
 	sequenceFileName = filename;
-}
-void Protein::setGeneOfOrigin(Gene geneOfOrigin){
-	gene = geneOfOrigin;
 }
